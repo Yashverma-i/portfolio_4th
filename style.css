@@ -59,14 +59,14 @@ body.dark{
 body.dark{
       
         --bg-black-900:#ffffff;
-        --bg-black-100: #4a3c2a;
-        --bg-black-50:#6eaf6e;
+        --bg-black-100: #e0e4eb;
+        --bg-black-50:#000000;
         --bg-black-51:#000000;
         --text-black-900:#181313;
         --text-black-700:#32132d;
-        --bg-black-111:rgb(174, 169, 118);
-        --box-shadow: rgb(173, 184, 109);
-        --bg-black-52:rgb(176, 135, 135);
+        --bg-black-111:rgb(207, 201, 235);
+        --box-shadow: rgb(75, 78, 59);
+        --bg-black-52:rgb(244, 166, 139);
 }
 ::-webkit-scrollbar{
     width: 10px;
@@ -507,9 +507,24 @@ h3.hello span{
     overflow: hidden;
     display: flex;
  }
+
+ @media (max-width:396px){
+  .portfolio-box{
+    scale: 0.8;
+  }
+
+
+  .qualification{
+    margin-right: 20px;
+    margin-right: 40px;
+  }
+}
+
   .portfolio-box img{
     transition: 0.4s ease;
     opacity: 0.3;
+    scale: 1.05;
+    object-fit: cover;
  }
 
  .portfolio-box:hover img{
@@ -551,10 +566,15 @@ h3.hello span{
     height:4rem;
     background: var(--skin-color);
     border-radius: 50%;
+    &:hover{
+        background-color: rgb(150, 35, 35);
+        scale: 1.05;
+    }
  }
  .portfolio-layer a i{
     font-size: 2rem;
     color: black;
+   
 }
 
    /* ------- contact------------- */
@@ -649,9 +669,10 @@ h3.hello span{
  .serv .edit p{
     font-size: 1.3rem;
     font-weight: 700;
-    line-height: 20px;
+    line-height: 26px;
     padding: 20px;
  }
+
  .edit{
     background-color: var(--text-black-900);
     height:480px;
@@ -672,23 +693,15 @@ h3.hello span{
     rotate:none;
     box-shadow: 10px 10px 15px rgba(11, 1, 1, 0.5);
  }
- .vid{
-    margin: 20px;
-    border-radius: 20px;
-    height: 280px;
-    box-shadow: 10px 10px 15px rgba(11, 1, 1, 0.5);
-    width: 230px;
-    transition: all 0.6s ease;
- }
- .vid:hover{
-    scale: 1.1;
- }
+
  .v{
     margin: 20px;
+    margin-top: 35px;
     border-radius: 20px;
     box-shadow: 10px 10px 15px rgba(11, 1, 1, 0.5);
-    height: 250px;
+    height: 210px;
     width: 230px;
+    object-fit: contain;
     transition: all 0.6s ease;
  }
  .v:hover{
@@ -703,9 +716,6 @@ h3.hello span{
         display: flex;
         left: 30px;
     }
-    /* .main-content{
-     padding-left: 0;
-    } */
      .aside.open{
         left:0;
      }
